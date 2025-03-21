@@ -1,8 +1,9 @@
 function converter() {
-    var valorA = Number(iptvalorA.value);
-    var valorB; 
+    var valorA = Number(iptValorA.value);
+    var valorB = Number(iptValorB.value); 
 
-    demo.innerHTML = `<p>Octal:
+    demoA.innerHTML = `<b>Conversão do valor ${valorA}</b> <br>
+        <p>Octal:
         <span>${valorA.toString(8)}</span>
         </p>
         <p>Hexadecimal:
@@ -11,11 +12,25 @@ function converter() {
         <p>Binário:
         <span>${valorA.toString(2)}</span>
         </p>`;
+
+        demoB.innerHTML = `<b>Conversão do valor ${valorB}</b> <br>
+        <p>Octal:
+        <span>${valorB.toString(8)}</span>
+        </p>
+        <p>Hexadecimal:
+        <span>${valorB.toString(16)}<span>
+        </p>
+        <p>Binário:
+        <span>${valorB.toString(2)}</span>
+        </p>`;
 } 
 function subtracao(valorA, valorB){
-
+    var valorA = Number(iptValorA.value);
+    var valorB = Number(iptValorB.value); 
 }
 function adicao(valorA, valorB) {
+    var valorA = Number(iptValorA.value);
+    var valorB = Number(iptValorB.value); 
     
 }
 
