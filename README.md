@@ -1,3 +1,2 @@
 # calculadora-de-bases-numericas
-
-# Colaboradores: Leonardo Monteiro e João Vitor Araujo
+Leonardo Monteiro e João Vitor Araujo
