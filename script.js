@@ -82,6 +82,8 @@ function adicaoDec() {
         if (resultBase == "binario") {
             if (tipoA == "octal") {
                 valorDecA = parseInt(valorA, 8)
+                valorDecA = valorDecA.toString(8)
+                valorDecA = parseInt(valorDecA, 8)
             }
             if (tipoA == "binario") {
                 valorDecA = parseInt(valorA , 2)
@@ -91,6 +93,45 @@ function adicaoDec() {
             }
             if(tipoA == "hexa"){
                 valorDecA =  (valorA, 16)
+            }
+
+            if (tipoB == "octal") {
+                valorDecB = parseInt(valorB, 8)
+                valorDecB = valorDecB.toString(8)
+                valorDecB = parseInt(valorDecB, 8)
+            }
+            if (tipoB == "binario") {
+                valorDecB = parseInt(valorB , 2)
+                
+            }
+            if (tipoB == "decimal") {
+                valorDecB = valorB
+            }
+            else if(tipoB == "hexa"){
+                valorDecB = parseInt(valorB, 16)
+            }
+            
+            valorDecA = Number(valorDecA);
+            valorDecB = Number(valorDecB);
+
+            result = valorDecA + valorDecB;
+
+        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em binário é: 
+        ${result.toString(2)}`
+        }
+
+        if (resultBase == "octal") {
+            if (tipoA == "octal") {
+                valorDecA = parseInt(valorA, 8)
+            }
+            if (tipoA == "binario") {
+                valorDecA = parseInt(valorA , 2)
+            }
+            if (tipoA == "decimal") {
+                valorDecA = valorA
+            }
+            if(tipoA == "hexa"){
+                valorDecA = parseInt(valorA, 16)
             }
 
             if (tipoB == "octal") {
@@ -112,8 +153,43 @@ function adicaoDec() {
 
             result = valorDecA + valorDecB;
 
-        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em binário é: 
-        ${result.toString(2)}`
+        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(8)}`
+        }
+
+        if (resultBase == "hexa") {
+            if (tipoA == "octal") {
+                valorDecA = parseInt(valorA, 8)
+            }
+            if (tipoA == "binario") {
+                valorDecA = parseInt(valorA , 2)
+            }
+            if (tipoA == "decimal") {
+                valorDecA = valorA
+            }
+            if(tipoA == "hexa"){
+                valorDecA = parseInt(valorA, 16)
+            }
+
+            if (tipoB == "octal") {
+                valorDecB = parseInt(valorB, 8)
+            }
+            if (tipoB == "binario") {
+                valorDecB = parseInt(valorB , 2)
+                
+            }
+            if (tipoB == "decimal") {
+                valorDecB = valorB
+            }
+            else if(tipoB == "hexa"){
+                valorDecB = parseInt(valorB, 16)
+            }
+            
+            valorDecA = Number(valorDecA);
+            valorDecB = Number(valorDecB);
+
+            result = valorDecA + valorDecB;
+
+        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em hexadecimal é: ${result.toString(16)}`
         }
     }
     
