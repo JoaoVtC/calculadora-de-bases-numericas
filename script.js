@@ -72,11 +72,49 @@ function adicaoDec() {
             }
             
             valorDecA = Number(valorDecA);
-            valorDecB = Number(valorDecB)
-        }
-        result = valorDecA + valorDecB;
+            valorDecB = Number(valorDecB);
+
+            result = valorDecA + valorDecB;
 
         msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em decimal é: ${result}`
+        }
+
+        if (resultBase == "binario") {
+            if (tipoA == "octal") {
+                valorDecA = parseInt(valorA, 8)
+            }
+            if (tipoA == "binario") {
+                valorDecA = parseInt(valorA , 2)
+            }
+            if (tipoA == "decimal") {
+                valorDecA = valorA
+            }
+            if(tipoA == "hexa"){
+                valorDecA =  (valorA, 16)
+            }
+
+            if (tipoB == "octal") {
+                valorDecB = parseInt(valorB, 8)
+            }
+            if (tipoB == "binario") {
+                valorDecB = parseInt(valorB , 2)
+                
+            }
+            if (tipoB == "decimal") {
+                valorDecB = valorB
+            }
+            else if(tipoB == "hexa"){
+                valorDecB = parseInt(valorB, 16)
+            }
+            
+            valorDecA = Number(valorDecA);
+            valorDecB = Number(valorDecB);
+
+            result = valorDecA + valorDecB;
+
+        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em binário é: 
+        ${result.toString(2)}`
+        }
     }
     
 
