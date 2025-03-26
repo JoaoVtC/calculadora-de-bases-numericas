@@ -34,54 +34,51 @@ function subtracao(valorA, valorB){
     var valorB = Number(iptValorB.value); 
 }
 function adicaoDec() {
+    var valorDecA;
+    var valorDecB; 
+    var resultBase = slctAdiResult.value
+    var result;
+
     valorA = iptValorA.value;
     valorB = iptValorB.value; 
     tipoA = slctBaseA.value
     tipoB = slctBaseB.value
+    if (resultBase == "decimal") {
+            if (tipoA == "octal") {
+                valorDecA = parseInt(valorA, 8)
+            }
+            if (tipoA == "binario") {
+                valorDecA = parseInt(valorA , 2)
+            }
+            if (tipoA == "decimal") {
+                valorDecA = valorA
+            }
+            if(tipoA == "hexa"){
+                valorDecA = parseInt(valorA, 16)
+            }
 
-    var valorDecA;
-    var valorDecB; 
-    
-    if (tipoA != "decimal") {
-        if (tipoA == "octal") {
-            valorDecA = parseInt(valorA, 8)
-        }
-        if (tipoA == "binario") {
-            valorDecA = parseInt(valorA , 2)
+            if (tipoB == "octal") {
+                valorDecB = parseInt(valorB, 8)
+            }
+            if (tipoB == "binario") {
+                valorDecB = parseInt(valorB , 2)
+                
+            }
+            if (tipoB == "decimal") {
+                valorDecB = valorB
+            }
+            else if(tipoB == "hexa"){
+                valorDecB = parseInt(valorB, 16)
+            }
             
+            valorDecA = Number(valorDecA);
+            valorDecB = Number(valorDecB)
         }
-        else if(tipoA == "hexa"){
-            valorDecA = parseInt(valorA, 16)
-        }
-        valorDecA = Number(valorDecA);
-    }
-    else{
-        valorDecA = Number(valorDecA);
-    }
+        result = valorDecA + valorDecB;
 
-    if (tipoB != "decimal") {
-        if (tipoB == "octal") {
-            valorDecB = parseInt(valorB, 8)
-        }
-        if (tipoB == "binario") {
-            valorDecB = parseInt(valorB , 2)
-            
-        }
-        else if(tipoB == "hexa"){
-            valorDecB = parseInt(valorB, 16)
-        }
-
-        valorDecB = Number(valorDecB)
+        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em decimal é: ${result}`
     }
-    else{
-        valorDecB = Number(valorB)
-    }
-
-    var result = valorDecA + valorDecB;
-
-    msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} é: ${result}`
     
-}
 
 // operações em bases diferentes
     // subtração

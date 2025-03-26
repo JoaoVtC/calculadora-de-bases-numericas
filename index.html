@@ -35,8 +35,24 @@
         <br><br>
 
         <button onclick="converter()">Converter</button>
+
         <button onclick="subtracao()">Subtrair</button>
-        <button onclick="adicaoDec()">Somar e converter para decimal</button>
+        <select name="" id="slctSubResult">
+            <option value="">-</option>
+            <option value="decimal">Decimal</option>
+            <option value="binario">Binário</option>
+            <option value="octal">Octal</option>
+            <option value="hexa">Hexadecimal</option>
+        </select>
+
+        <button onclick="adicaoDec()">Somar</button>
+        <select name="" id="slctAdiResult">
+            <option value="">-</option>
+            <option value="decimal">Decimal</option>
+            <option value="binario">Binário</option>
+            <option value="octal">Octal</option>
+            <option value="hexa">Hexadecimal</option>
+        </select>
 
         <h3>Resultados:</h3>
         <div id="msgResultA"></div> <br> <br>
