@@ -72,12 +72,8 @@ function adicaoDec() {
         if (resultBase == "binario") {
             if (tipoA == "octal") {
                 valorDecA = parseInt(valorA, 8)
-                valorDecA = valorDecA.toString(8)
-                valorDecA = parseInt(valorDecA, 8)
 
                 valorDecB = parseInt(valorB, 8)
-                valorDecB = valorDecB.toString(8)
-                valorDecB = parseInt(valorDecB, 8)
             }
             if (tipoA == "binario") {
                 valorDecA = parseInt(valorA , 2)
@@ -88,7 +84,7 @@ function adicaoDec() {
                 valorDecB = valorB
             }
             else if(tipoA == "hexa"){
-                valorDecA =  (valorA, 16)
+                valorDecA =  parseInt(valorA, 16)
                 valorDecB = parseInt(valorB, 16)
             }
             
