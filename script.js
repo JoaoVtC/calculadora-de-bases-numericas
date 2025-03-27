@@ -141,6 +141,8 @@ function calcular() {
             msgResultA.innerHTML = `Escolha a base do resultado!!!`
         }
 
+        
+
         else if(tipoCalc == ''){
             msgResultA.innerHTML = `Escolha uma operação!!!`
         }

@@ -45,36 +45,34 @@
 
         <h1>Calculadora de Bases númericas</h1>
 
-        <b>Digite um número:</b>
+        <b>Digite um número:</b> <br>
         <input id="iptValorA" type="text" placeholder="Ex: 42">
         <select name="" id="slctBase">
-            <option value="">-- Base númerica --</option>
+            <option value="">-- Base dos números --</option>
             <option value="10">Decimal</option>
             <option value="2">Binário</option>
             <option value="8">Octal</option>
             <option value="16">Hexadecimal</option>
         </select>
         <br><br>
+        <select name="" id="slctTipoCalc">
+            <option value="">-- Selecione o calculo --</option>
+            <option value="soma">+</option>
+            <option value="subtração">-</option>
+            <option value="divisão">/</option>
+            <option value="multiplicação">*</option>
+        </select> <br>
 
-        <b>Digite um número:</b>
         <input id="iptValorB" type="text" placeholder="Ex: 42">
          <br> <br>
 
         <button onclick="calcular()">Calcular</button>
         <select name="" id="slctAdiResult">
-            <option value="">-- Selecione o a base do resultado --</option>
+            <option value="">-- Base do resultado --</option>
             <option value="decimal">Decimal</option>
             <option value="binario">Binário</option>
             <option value="octal">Octal</option>
             <option value="hexa">Hexadecimal</option>
-        </select>
-
-        <select name="" id="slctTipoCalc">
-            <option value="">-- selecione o calculo --</option>
-            <option value="soma">Soma</option>
-            <option value="subtração">Subtração</option>
-            <option value="divisão">Divisão</option>
-            <option value="multiplicação">Multiplicação</option>
         </select>
 
         <h3>Resultados:</h3>
