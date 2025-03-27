@@ -1,65 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>SPTecher's Machine</title>
+    <title>Conversor de Bases Numéricas</title>
 </head>
 
 <body>
-    <center>
-        <h1>Calculadora Vitor e Leo</h1>
+    <main>
+        <h1>Conversor de Bases Numéricas</h1>
 
-        <b>Digite um número:</b>
-        <input id="iptValorA" type="text" placeholder="Ex: 42">
-        <select name="" id="slctBaseA">
-            <option value="">-- Base númerica --</option>
-            <option value="decimal">Decimal</option>
-            <option value="binario">Binário</option>
-            <option value="octal">Octal</option>
-            <option value="hexa">Hexadecimal</option>
-        </select>
-        <br><br>
+        <section>
+            <label for="iptValorA">Insira um número:</label>
+            <input type="text" id="iptValorA" placeholder="valor a ser convertido">
 
-        <b>Digite um número:</b>
-        <input id="iptValorB" type="text" placeholder="Ex: 42">
-        <select name="" id="slctBaseB">
-            <option value="">-- Base númerica --</option>
-            <option value="decimal">Decimal</option>
-            <option value="binario">Binário</option>
-            <option value="octal">Octal</option>
-            <option value="hexa">Hexadecimal</option>
-        </select>
-        <br><br>
+            <label for="iptBaseA">da base:</label>
+            <select id="iptBaseA">
+                <option value="decimal" selected>Decimal</option>
+                <option value="binario">Binário</option>
+                <option value="octal">Octal</option>
+                <option value="hexa">Hexadecimal</option>
+            </select>
+
+            <label for="iptBaseB">para a base:</label>
+            <select id="iptBaseB">
+                <option value="decimal">Decimal</option>
+                <option value="binario" selected>Binário</option>
+                <option value="octal">Octal</option>
+                <option value="hexa">Hexadecimal</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Resultado:</h2>
+            <h1>
+                <div id="resultado"></div>
+            </h1>
+        </section>
 
         <button onclick="converter()">Converter</button>
-
-        <button onclick="subtracao()">Subtrair</button>
-        <select name="" id="slctSubResult">
-            <option value="">-</option>
-            <option value="decimal">Decimal</option>
-            <option value="binario">Binário</option>
-            <option value="octal">Octal</option>
-            <option value="hexa">Hexadecimal</option>
-        </select>
-
-        <button onclick="adicaoDec()">Somar</button>
-        <select name="" id="slctAdiResult">
-            <option value="">-</option>
-            <option value="decimal">Decimal</option>
-            <option value="binario">Binário</option>
-            <option value="octal">Octal</option>
-            <option value="hexa">Hexadecimal</option>
-        </select>
-
-        <h3>Resultados:</h3>
-        <div id="msgResultA"></div> <br> <br>
-        <div id="msgResultB"></div>
-    </center>
-
+        <button onclick="limpar()">Limpar campos</button>
+    </main>
 </body>
 
-<script src="script.js"></script>
 </html>
