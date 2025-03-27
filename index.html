@@ -47,12 +47,12 @@
 
         <b>Digite um número:</b>
         <input id="iptValorA" type="text" placeholder="Ex: 42">
-        <select name="" id="slctBaseA">
+        <select name="" id="slctBase">
             <option value="">-- Base númerica --</option>
-            <option value="decimal">Decimal</option>
-            <option value="binario">Binário</option>
-            <option value="octal">Octal</option>
-            <option value="hexa">Hexadecimal</option>
+            <option value="10">Decimal</option>
+            <option value="2">Binário</option>
+            <option value="8">Octal</option>
+            <option value="16">Hexadecimal</option>
         </select>
         <br><br>
 
@@ -60,22 +60,21 @@
         <input id="iptValorB" type="text" placeholder="Ex: 42">
          <br> <br>
 
-        <button onclick="subtracao()">Subtrair</button>
-        <select name="" id="slctSubResult">
-            <option value="">-</option>
+        <button onclick="calcular()">Calcular</button>
+        <select name="" id="slctAdiResult">
+            <option value="">-- Selecione o a base do resultado --</option>
             <option value="decimal">Decimal</option>
             <option value="binario">Binário</option>
             <option value="octal">Octal</option>
             <option value="hexa">Hexadecimal</option>
         </select>
 
-        <button onclick="adicaoDec()">Somar</button>
-        <select name="" id="slctAdiResult">
-            <option value="">-</option>
-            <option value="decimal">Decimal</option>
-            <option value="binario">Binário</option>
-            <option value="octal">Octal</option>
-            <option value="hexa">Hexadecimal</option>
+        <select name="" id="slctTipoCalc">
+            <option value="">-- selecione o calculo --</option>
+            <option value="soma">Soma</option>
+            <option value="subtração">Subtração</option>
+            <option value="divisão">Divisão</option>
+            <option value="multiplicação">Multiplicação</option>
         </select>
 
         <h3>Resultados:</h3>

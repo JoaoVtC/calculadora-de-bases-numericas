@@ -1,7 +1,3 @@
-var valorA;
-var valorB;
-var tipoA;
-var tipoB;
 
 function converter() {
     var valor = iptValorConvert.value;
@@ -34,122 +30,119 @@ function subtracao(valorA, valorB) {
     var valorA = Number(iptValorA.value);
     var valorB = Number(iptValorB.value);
 }
-function adicaoDec() {
-    var valorDecA;
-    var valorDecB; 
+function calcular() {
+    var valorAdiA;
+    var valorAdiB; 
     var resultBase = slctAdiResult.value
     var result;
+    var valorA = iptValorA.value;
+    var valorB = iptValorB.value; 
+    var tipoResult = Number(slctBase.value)
+    var tipoCalc = slctTipoCalc.value;
 
-    valorA = iptValorA.value;
-    valorB = iptValorB.value; 
-    tipoA = slctBaseA.value
+
     if (resultBase == "decimal") {
-            if (tipoA == "octal") {
-                valorDecA = parseInt(valorA, 8)
-                valorDecB = parseInt(valorB, 8)
+            valorAdiA = parseInt(valorA , tipoResult)
+            valorAdiB = parseInt(valorB , tipoResult)
+
+            if(tipoCalc == 'soma'){
+                result = valorAdiA + valorAdiB;
             }
-            if (tipoA == "binario") {
-                valorDecA = parseInt(valorA , 2)
-                valorDecB = parseInt(valorB , 2)
+
+            if(tipoCalc == 'subtração'){
+                result = valorAdiA - valorAdiB;
             }
-            if (tipoA == "decimal") {
-                valorDecA = valorA
-                valorDecB = valorB
+
+            if(tipoCalc == 'divisão'){
+                result = valorAdiA / valorAdiB;
             }
-            else if(tipoA == "hexa"){
-                valorDecA = parseInt(valorA, 16)
-                valorDecB = parseInt(valorB, 16)
-            }
+
+            if(tipoCalc == 'multiplicação'){
+                result = valorAdiA * valorAdiB;
             }
             
-            valorDecA = Number(valorDecA);
-            valorDecB = Number(valorDecB);
 
-            result = valorDecA + valorDecB;
-
-        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em decimal é: ${result}`
+            msgResultA.innerHTML = `A ${tipoCalc} de ${valorA} com ${valorB} em decimal é: ${result}`
+    }
 
         if (resultBase == "binario") {
-            if (tipoA == "octal") {
-                valorDecA = parseInt(valorA, 8)
+            valorAdiA = parseInt(valorA , tipoResult)
+            valorAdiB = parseInt(valorB , tipoResult)
 
-                valorDecB = parseInt(valorB, 8)
+             if(tipoCalc == 'soma'){
+                result = valorAdiA + valorAdiB;
             }
-            if (tipoA == "binario") {
-                valorDecA = parseInt(valorA , 2)
-                valorDecB = parseInt(valorB , 2)
+
+            if(tipoCalc == 'subtração'){
+                result = valorAdiA - valorAdiB;
             }
-            if (tipoA == "decimal") {
-                valorDecA = valorA
-                valorDecB = valorB
+
+            if(tipoCalc == 'divisão'){
+                result = valorAdiA / valorAdiB;
             }
-            else if(tipoA == "hexa"){
-                valorDecA =  parseInt(valorA, 16)
-                valorDecB = parseInt(valorB, 16)
+
+            if(tipoCalc == 'multiplicação'){
+                result = valorAdiA * valorAdiB;
             }
             
-            valorDecA = Number(valorDecA);
-            valorDecB = Number(valorDecB);
-
-            result = valorDecA + valorDecB;
-
-        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em binário é: 
+            msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em binário é: 
         ${result.toString(2)}`
         }
 
         if (resultBase == "octal") {
-            if (tipoA == "octal") {
-                valorDecA = parseInt(valorA, 8)
+            valorAdiA = parseInt(valorA , tipoResult)
+            valorAdiB = parseInt(valorB , tipoResult)
+            if(tipoCalc == 'soma'){
+                result = valorAdiA + valorAdiB;
+            }
 
-                valorDecB = parseInt(valorB, 8)
+            if(tipoCalc == 'subtração'){
+                result = valorAdiA - valorAdiB;
             }
-            if (tipoA == "binario") {
-                valorDecA = parseInt(valorA , 2)
-                valorDecB = parseInt(valorB , 2)
+
+            if(tipoCalc == 'divisão'){
+                result = valorAdiA / valorAdiB;
             }
-            if (tipoA == "decimal") {
-                valorDecA = valorA
-                valorDecB = valorB
-            }
-            else if(tipoA == "hexa"){
-                valorDecA =  parseInt(valorA, 16)
-                valorDecB = parseInt(valorB, 16)
+
+            if(tipoCalc == 'multiplicação'){
+                result = valorAdiA * valorAdiB;
             }
             
-            valorDecA = Number(valorDecA);
-            valorDecB = Number(valorDecB);
 
-            result = valorDecA + valorDecB;
-
-        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(8)}`
+            msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(8)}`
         }
 
         if (resultBase == "hexa") {
-            if (tipoA == "octal") {
-                valorDecA = parseInt(valorA, 8)
+            valorAdiA = parseInt(valorA, tipoResult)
+            valorAdiB = parseInt(valorB, tipoResult)
 
-                valorDecB = parseInt(valorB, 8)
+            if(tipoCalc == 'soma'){
+                result = valorAdiA + valorAdiB;
             }
-            if (tipoA == "binario") {
-                valorDecA = parseInt(valorA , 2)
-                valorDecB = parseInt(valorB , 2)
+
+            if(tipoCalc == 'subtração'){
+                result = valorAdiA - valorAdiB;
             }
-            if (tipoA == "decimal") {
-                valorDecA = valorA
-                valorDecB = valorB
+
+            if(tipoCalc == 'divisão'){
+                result = valorAdiA / valorAdiB;
             }
-            else if(tipoA == "hexa"){
-                valorDecA =  parseInt(valorA, 16)
-                valorDecB = parseInt(valorB, 16)
+
+            if(tipoCalc == 'multiplicação'){
+                result = valorAdiA * valorAdiB;
             }
             
-            valorDecA = Number(valorDecA);
-            valorDecB = Number(valorDecB);
 
-            result = valorDecA + valorDecB;
+            msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(16)}`
+        }
 
-        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(16)}`
-    }
+        if(resultBase == ''){
+            msgResultA.innerHTML = `Escolha a base do resultado!!!`
+        }
+
+        else if(tipoCalc == ''){
+            msgResultA.innerHTML = `Escolha uma operação!!!`
+        }
 }
     
 
