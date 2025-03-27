@@ -100,28 +100,19 @@ function adicaoDec() {
         if (resultBase == "octal") {
             if (tipoA == "octal") {
                 valorDecA = parseInt(valorA, 8)
+
+                valorDecB = parseInt(valorB, 8)
             }
             if (tipoA == "binario") {
                 valorDecA = parseInt(valorA , 2)
+                valorDecB = parseInt(valorB , 2)
             }
             if (tipoA == "decimal") {
                 valorDecA = valorA
-            }
-            if(tipoA == "hexa"){
-                valorDecA = parseInt(valorA, 16)
-            }
-
-            if (tipoB == "octal") {
-                valorDecB = parseInt(valorB, 8)
-            }
-            if (tipoB == "binario") {
-                valorDecB = parseInt(valorB , 2)
-                
-            }
-            if (tipoB == "decimal") {
                 valorDecB = valorB
             }
-            else if(tipoB == "hexa"){
+            else if(tipoA == "hexa"){
+                valorDecA =  parseInt(valorA, 16)
                 valorDecB = parseInt(valorB, 16)
             }
             
@@ -136,28 +127,19 @@ function adicaoDec() {
         if (resultBase == "hexa") {
             if (tipoA == "octal") {
                 valorDecA = parseInt(valorA, 8)
+
+                valorDecB = parseInt(valorB, 8)
             }
             if (tipoA == "binario") {
                 valorDecA = parseInt(valorA , 2)
+                valorDecB = parseInt(valorB , 2)
             }
             if (tipoA == "decimal") {
                 valorDecA = valorA
-            }
-            if(tipoA == "hexa"){
-                valorDecA = parseInt(valorA, 16)
-            }
-
-            if (tipoB == "octal") {
-                valorDecB = parseInt(valorB, 8)
-            }
-            if (tipoB == "binario") {
-                valorDecB = parseInt(valorB , 2)
-                
-            }
-            if (tipoB == "decimal") {
                 valorDecB = valorB
             }
-            else if(tipoB == "hexa"){
+            else if(tipoA == "hexa"){
+                valorDecA =  parseInt(valorA, 16)
                 valorDecB = parseInt(valorB, 16)
             }
             
@@ -166,9 +148,9 @@ function adicaoDec() {
 
             result = valorDecA + valorDecB;
 
-        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em hexadecimal é: ${result.toString(16)}`
-        }
+        msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(16)}`
     }
+}
     
 
 // operações em bases diferentes
