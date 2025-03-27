@@ -68,37 +68,27 @@ function adicaoDec() {
             result = valorDecA + valorDecB;
 
         msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em decimal é: ${result}`
-        }
 
         if (resultBase == "binario") {
             if (tipoA == "octal") {
                 valorDecA = parseInt(valorA, 8)
                 valorDecA = valorDecA.toString(8)
                 valorDecA = parseInt(valorDecA, 8)
-            }
-            if (tipoA == "binario") {
-                valorDecA = parseInt(valorA , 2)
-            }
-            if (tipoA == "decimal") {
-                valorDecA = valorA
-            }
-            if(tipoA == "hexa"){
-                valorDecA =  (valorA, 16)
-            }
 
-            if (tipoB == "octal") {
                 valorDecB = parseInt(valorB, 8)
                 valorDecB = valorDecB.toString(8)
                 valorDecB = parseInt(valorDecB, 8)
             }
-            if (tipoB == "binario") {
+            if (tipoA == "binario") {
+                valorDecA = parseInt(valorA , 2)
                 valorDecB = parseInt(valorB , 2)
-                
             }
-            if (tipoB == "decimal") {
+            if (tipoA == "decimal") {
+                valorDecA = valorA
                 valorDecB = valorB
             }
-            else if(tipoB == "hexa"){
+            else if(tipoA == "hexa"){
+                valorDecA =  (valorA, 16)
                 valorDecB = parseInt(valorB, 16)
             }
             
@@ -182,7 +172,7 @@ function adicaoDec() {
 
         msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em hexadecimal é: ${result.toString(16)}`
         }
-
+    }
     
 
 // operações em bases diferentes
