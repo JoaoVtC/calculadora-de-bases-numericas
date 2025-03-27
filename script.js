@@ -85,13 +85,14 @@ function calcular() {
                 result = valorAdiA * valorAdiB;
             }
             
-            msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em binário é: 
+            msgResultA.innerHTML = `A ${tipoCalc} de ${valorA} com ${valorB} em binário é: 
         ${result.toString(2)}`
         }
 
         if (resultBase == "octal") {
             valorAdiA = parseInt(valorA , tipoResult)
             valorAdiB = parseInt(valorB , tipoResult)
+
             if(tipoCalc == 'soma'){
                 result = valorAdiA + valorAdiB;
             }
@@ -109,7 +110,7 @@ function calcular() {
             }
             
 
-            msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(8)}`
+            msgResultA.innerHTML = `A ${tipoCalc} de ${valorA} com ${valorB} em octal é: ${result.toString(8)}`
         }
 
         if (resultBase == "hexa") {
@@ -133,7 +134,7 @@ function calcular() {
             }
             
 
-            msgResultA.innerHTML = `O resultado da soma de ${valorA} com ${valorB} em octal é: ${result.toString(16)}`
+            msgResultA.innerHTML = `A ${tipoCalc} de ${valorA} com ${valorB} em hexadecimal é: ${result.toString(16)}`
         }
 
         if(resultBase == ''){
@@ -145,16 +146,4 @@ function calcular() {
         }
 }
     
-
-// operações em bases diferentes
-// subtração
-// divisão
-// adição
-// multiplicação
-// usuário poder inserir diferentes bases númericas para fazer soma
-
-// O Binário é o caminho da luz. converter tudo para decimal para realizar as contas
-// LINKS UTEIS
-// https://dev.to/mlgvla/javascript-number-conversions-using-parseint-and-tostring-7fm#:~:text=parseInt()%20can%20be%20used,how%20the%20radix%20parameter%20functions.&text=In%20each%20case%20we%20are,or%2011%20in%20base%2010.
-// https://www.npmjs.com/package/base-converter
 
